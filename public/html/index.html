@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" href="/public/css/index.css" type="text/css">
-    <script src="/public/js/index.js" type="text/javascript"></script>
+    <!-- <script src="/public/js/index.js"></script> -->
+    <script src="/public/js/app.js"></script>
   </head>
   <body>
-    <h1 class="title" id="title">Weather or not...</h1>
-    <div class="inputContainer" id="inputcontainer">
-      <input type="text" name="city" class="cityInput" placeholder="Enter a city..." id="cityInput">
+    <div class="red">
+      <h1 id="title">myWeather</h1>
     </div>
-    <div class="button" id="button">Show me the weather!</div>
+    <input type="text" name="city" class="cityInput" placeholder="Enter a city ..." id="cityInput">
     <br>
-    <div class="weather weathermain" id="weathermain">Sunny</div>
+    <div>Show me the weather</div>
     <br>
-    <div class="image"><img src="../../assets/images/clear.png" height="125px" width="125px" id = "image"></div>
+    <div style="color: purple;">Sunny</div>
     <br>
-    <div class="weather weatherdescription" id="weatherdescription">Clear Skies</div>
+    <div>
+      <img src="../../assets/images/clear.png" height="125px" width="125px" id="weatherImage"></img>
+    </div>
     <br>
-    <div class="weather weathertemperature" id="weathertemperature">22°C</div>
+    <div> Clear Sky !</div>
     <br>
-    <div class="weather weatherhumidity" id="weatherhumidity">11%</div>
+    <a class="hyperlink" href="http://google.com">LMGTFY</a>
+    <br>
+    <div>22°C</div>
+    <br>
+    <div>11%</div>
   </body>
 </html>

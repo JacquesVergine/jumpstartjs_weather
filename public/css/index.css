@@ -1,6 +1,30 @@
+.red {
+  color: green;
+  background: yellow;
+}
+
+.red:hover{
+  color: blue;
+  background: red;
+}
+
+.hyperlink {
+  color: blue;
+  text-decoration: underline;
+}
+
+.hyperlink:hover {
+  color: lightblue;
+  text-decoration: underline;
+}
+
+.hyperlink:active {
+  color: orange;
+}
+
 body {
   background-color: #11014B;
-  color: white;
+  color: pink;
   text-align: center;
   font-family: Moonbold, sans-serif;
   padding-top: 0.5rem;
