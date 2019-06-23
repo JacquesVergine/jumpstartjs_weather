@@ -48,6 +48,7 @@ function makeRequest() {
       } else {
         console.error(xhr.statusText)
         // weatherText.innerHTML = oneLinerJoke.getRandomJoke()
+        getJoke()
         weatherImage.src = unexpectedImageLink
       }
     }
@@ -57,6 +58,25 @@ function makeRequest() {
   }
   // ... execute the query : Lazy sent ?
   xhr.send(null)
+}
+
+function getJoke() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://jumpstartjs-jver.herokuapp.com/joke");
+  xhr.onload = function(e) {
+    if(xhr.readyState == 4) {
+      if(xhr.status == 200) {
+      } else {
+        console.error(xhr.statusText)
+      }
+    }
+  }
+  xhr.oneerror = function(e) {
+    console.error(xhr.statusText)
+  }
+  // ... execute the query : Lazy sent ?
+  return xhr.send(null)
+
 }
 
 window.onload = function() {
