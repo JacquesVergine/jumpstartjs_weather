@@ -47,7 +47,7 @@ function makeRequest() {
         }
       } else {
         console.error(xhr.statusText)
-        weatherText.innerHTML = oneLinerJoke.getRandomJoke()
+        // weatherText.innerHTML = oneLinerJoke.getRandomJoke()
         weatherImage.src = unexpectedImageLink
       }
     }
