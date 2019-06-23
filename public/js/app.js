@@ -1,5 +1,3 @@
-var oneLinerJoke = require("one-liner-joke");
-
 function makeRequest() {
   var cityInput = document.getElementById("cityInput")
   var button = document.getElementById("button")
@@ -62,6 +60,8 @@ function makeRequest() {
 }
 
 window.onload = function() {
+  // oneLinerJoke = require("one-liner-joke");
+
   button.addEventListener("click", makeRequest)
   cityInput.addEventListener('keydown', function (e) {
     if (e.keyCode === 13) { // 13 is enter
