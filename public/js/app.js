@@ -43,12 +43,12 @@ function makeRequest() {
         } else if (["Rain", "Drizzle"].includes(newWeatherText)) {
           weatherImage.src = "../../assets/images/rain.png"
         } else {
+          weatherText.innerHTML = "Unknown city. Try again !"
           weatherImage.src = unexpectedImageLink
         }
       } else {
         console.error(xhr.statusText)
-        // weatherText.innerHTML = oneLinerJoke.getRandomJoke()
-        getJoke()
+        weatherText.innerHTML = "Unknown city. Try again !"
         weatherImage.src = unexpectedImageLink
       }
     }
@@ -60,24 +60,27 @@ function makeRequest() {
   xhr.send(null)
 }
 
-function getJoke() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://jumpstartjs-jver.herokuapp.com/joke");
-  xhr.onload = function(e) {
-    if(xhr.readyState == 4) {
-      if(xhr.status == 200) {
-      } else {
-        console.error(xhr.statusText)
-      }
-    }
-  }
-  xhr.oneerror = function(e) {
-    console.error(xhr.statusText)
-  }
-  // ... execute the query : Lazy sent ?
-  return xhr.send(null)
-
-}
+// function getJoke() {
+//   var xhr = new XMLHttpRequest();
+//   // xhr.open("GET", "https://jumpstartjs-jver.herokuapp.com/joke");
+//   xhr.open("GET", "http://localhost:4000/joke");
+//   xhr.onload = function(e) {
+//     if(xhr.readyState == 4) {
+//       if(xhr.status == 200) {
+//         var data = JSON.parse(xhr.responseText)
+//         console.log(data.joke.body)
+//       } else {
+//         console.error(xhr.statusText)
+//       }
+//     }
+//   }
+//   xhr.oneerror = function(e) {
+//     console.error(xhr.statusText)
+//   }
+//   // ... execute the query : Lazy sent ?
+//   xhr.send(null)
+//
+// }
 
 window.onload = function() {
   // oneLinerJoke = require("one-liner-joke");
